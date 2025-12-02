@@ -1,0 +1,94 @@
+name: daamduu_qr_ui
+description: ""
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.3
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/svg/apple.svg
+    - assets/svg/bell.svg
+    - assets/svg/category.svg
+    - assets/svg/comment_info.svg
+    - assets/svg/contacts.svg
+    - assets/svg/croissant.svg
+    - assets/svg/cup_straw_swoosh.svg
+    - assets/svg/customers.svg
+    - assets/svg/dashboard.svg
+    - assets/svg/empty_set.svg
+    - assets/svg/establishment.svg
+    - assets/svg/face_sad_sweat.svg
+    - assets/svg/food.svg
+    - assets/svg/french_fries.svg
+    - assets/svg/glass_cheers.svg
+    - assets/svg/google.svg
+    - assets/svg/hamburger_soda.svg
+    - assets/svg/heart_fill.svg
+    - assets/svg/heart.svg
+    - assets/svg/house_fill.svg
+    - assets/svg/house.svg
+    - assets/svg/icon.svg
+    - assets/svg/instagram.svg
+    - assets/svg/interrogation.svg
+    - assets/svg/list.svg
+    - assets/svg/logo.svg
+    - assets/svg/mail.svg
+    - assets/svg/map_marker_fill.svg
+    - assets/svg/map_marker.svg
+    - assets/svg/menu_food.svg
+    - assets/svg/menu.svg
+    - assets/svg/mug_hot_alt.svg
+    - assets/svg/news.svg
+    - assets/svg/phone.svg
+    - assets/svg/place.svg
+    - assets/svg/qr.svg
+    - assets/svg/rating.svg
+    - assets/svg/restaurant.svg
+    - assets/svg/search.svg
+    - assets/svg/share.svg
+    - assets/svg/shield_check.svg
+    - assets/svg/shopping_basket_fill.svg
+    - assets/svg/shopping_basket.svg
+    - assets/svg/sign_in.svg
+    - assets/svg/som.svg
+    - assets/svg/statistic.svg
+    - assets/svg/telegram.svg
+    - assets/svg/time_past.svg
+    - assets/svg/trash_xmark.svg
+    - assets/svg/user_fill.svg
+    - assets/svg/user.svg
+    - assets/svg/whatsapp.svg
+
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: "assets/fonts/Manrope/Manrope-ExtraBold.ttf"
+          weight: 800
+        - asset: "assets/fonts/Manrope/Manrope-Bold.ttf"
+          weight: 700
+        - asset: "assets/fonts/Manrope/Manrope-SemiBold.ttf"
+          weight: 600
+        - asset: "assets/fonts/Manrope/Manrope-Medium.ttf"
+          weight: 500
+        - asset: "assets/fonts/Manrope/Manrope-Regular.ttf"
+          weight: 400
+        - asset: "assets/fonts/Manrope/Manrope-Light.ttf"
+          weight: 300
+        - asset: "assets/fonts/Manrope/Manrope-ExtraLight.ttf"
+          weight: 200

@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+class CustomThemeData {
+  CustomThemeData({required this.brightness});
+
+  final Brightness brightness;
+
+  final font = 'Manrope';
+
+  Color by({required Color light, required Color dark}) {
+    return brightness == Brightness.light ? light : dark;
+  }
+
+  Color get primary => Color(0xffe44641);
+
+  Color get primaryBg => const Color(0xFFffffff);
+
+  Color get secondaryBg => const Color(0xFFF5F5F6);
+
+  Color get invertBg => const Color(0xff1e293c);
+
+  Color get primaryFg => const Color(0xff2a2a2a);
+
+  Color get secondaryFg => Color(0xff767676);
+
+  Color get invertFg => Color(0xffffffff);
+
+  Color get black => Color(0xff000000);
+
+  Color get white => Color(0xffffffff);
+
+  Color get green => Color(0xff48a357);
+
+  Color get blue => Color(0xff0d6efd);
+
+  Color get orange => Color(0xFFfd7e14);
+
+  Color get yellow => Color(0xffffc107);
+
+  Color get hover => primaryFg.withValues(alpha: 0.075);
+
+  Color get invertHover => invertFg.withValues(alpha: 0.075);
+
+  Color get splash => primaryFg.withValues(alpha: 0.125);
+
+  Color get invertSplash => invertFg.withValues(alpha: 0.125);
+
+  Color get transparent => Color(0x00000000);
+
+  TextStyle get primaryTextStyle =>
+      TextStyle(fontWeight: FontWeight.w500, color: primaryFg, fontSize: 14);
+  TextStyle get secondaryTextStyle =>
+      TextStyle(fontWeight: FontWeight.w400, color: secondaryFg, fontSize: 14);
+  TextStyle get invertTextStyle =>
+      TextStyle(fontWeight: FontWeight.w500, color: invertFg, fontSize: 14);
+
+  ThemeData toTheme() {
+    return ThemeData(
+      useMaterial3: true,
+      brightness: brightness,
+      primaryColor: primary,
+      scaffoldBackgroundColor: primaryBg,
+      fontFamily: font,
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(4),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+extension ThemeExtension on ThemeData {
+  CustomThemeData get custom => CustomThemeData(brightness: brightness);
+}
+
+final lightTheme = CustomThemeData(brightness: Brightness.light).toTheme();
+final darkTheme = CustomThemeData(brightness: Brightness.dark).toTheme();
