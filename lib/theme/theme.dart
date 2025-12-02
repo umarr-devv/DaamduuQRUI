@@ -45,6 +45,8 @@ class CustomThemeData {
 
   Color get invertSplash => invertFg.withValues(alpha: 0.125);
 
+  Color get textSelect => primaryFg.withValues(alpha: 0.075);
+
   Color get transparent => Color(0x00000000);
 
   TextStyle get primaryTextStyle =>
@@ -61,13 +63,7 @@ class CustomThemeData {
       primaryColor: primary,
       scaffoldBackgroundColor: primaryBg,
       fontFamily: font,
-      textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadiusGeometry.circular(4),
-          ),
-        ),
-      ),
+      textSelectionTheme: TextSelectionThemeData(selectionColor: textSelect),
     );
   }
 }
