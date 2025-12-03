@@ -35,7 +35,7 @@ class CustomThemeData {
 
   Color get blue => Color(0xff2563eb);
 
-  Color get rose => Color(0xffdc2626);
+  Color get red => Color(0xffdc2626);
 
   Color get orange => Color(0xFFf97316);
 
@@ -86,7 +86,7 @@ class CustomThemeData {
         secondaryForeground: secondaryFg,
         muted: invertBg,
         mutedForeground: invertFg,
-        destructive: orange,
+        destructive: red,
         destructiveForeground: invertFg,
         error: orange,
         errorForeground: invertFg,
