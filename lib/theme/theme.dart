@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:forui/forui.dart';
 
 class CustomThemeData {
   CustomThemeData({required this.brightness});
@@ -64,6 +66,30 @@ class CustomThemeData {
       scaffoldBackgroundColor: primaryBg,
       fontFamily: font,
       textSelectionTheme: TextSelectionThemeData(selectionColor: textSelect),
+    );
+  }
+
+  FThemeData toFTheme() {
+    return FThemeData(
+      typography: FTypography(defaultFontFamily: font),
+      colors: FColors(
+        brightness: brightness,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+        barrier: secondaryFg,
+        background: primaryFg,
+        foreground: primaryFg,
+        primary: primary,
+        primaryForeground: primaryFg,
+        secondary: secondaryBg,
+        secondaryForeground: secondaryFg,
+        muted: invertBg,
+        mutedForeground: invertFg,
+        destructive: orange,
+        destructiveForeground: invertFg,
+        error: orange,
+        errorForeground: invertFg,
+        border: secondaryFg,
+      ),
     );
   }
 }
