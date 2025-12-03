@@ -8,7 +8,7 @@ class CustomIconButton extends StatelessWidget {
     this.background,
     required this.icon,
     this.radius = 8,
-    this.enable = true,
+    this.enabled = true,
     this.loading = false,
     required this.onPressed,
     this.invert = false,
@@ -17,7 +17,7 @@ class CustomIconButton extends StatelessWidget {
   final Color? background;
   final CustomIcons icon;
   final double radius;
-  final bool enable;
+  final bool enabled;
   final bool loading;
   final void Function() onPressed;
   final bool invert;
@@ -31,19 +31,19 @@ class CustomIconButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(radius),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: enable ? onPressed : () {},
-        focusColor: enable
+        onTap: enabled ? onPressed : () {},
+        focusColor: enabled
             ? invert
                   ? theme.custom.invertHover
                   : theme.custom.hover
             : theme.custom.transparent,
-        splashColor: enable
+        splashColor: enabled
             ? invert
                   ? theme.custom.invertSplash
                   : theme.custom.splash
             : theme.custom.transparent,
         highlightColor: theme.custom.transparent,
-        hoverColor: enable
+        hoverColor: enabled
             ? invert
                   ? theme.custom.invertHover
                   : theme.custom.hover

@@ -13,6 +13,7 @@ class CustomTextField extends StatelessWidget {
     this.background,
     this.foreground,
     this.radius = 12,
+    this.enabled = true,
   });
 
   final CustomIcons? icon;
@@ -23,6 +24,7 @@ class CustomTextField extends StatelessWidget {
   final Color? background;
   final Color? foreground;
   final double radius;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +53,7 @@ class CustomTextField extends StatelessWidget {
                 focusNode: focusNode,
                 onChanged: onChanged,
                 cursorColor: foreground ?? theme.custom.primaryFg,
+                enabled: enabled,
                 style: theme.custom.primaryTextStyle.copyWith(
                   fontSize: 16,
                   color: foreground,

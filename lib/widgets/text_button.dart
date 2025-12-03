@@ -9,7 +9,7 @@ class CustomTextButton extends StatelessWidget {
     this.icon,
     required this.label,
     this.radius = 8,
-    this.enable = true,
+    this.enabled = true,
     this.loading = false,
     required this.onPressed,
     this.invert = false,
@@ -19,7 +19,7 @@ class CustomTextButton extends StatelessWidget {
   final CustomIcons? icon;
   final String label;
   final double radius;
-  final bool enable;
+  final bool enabled;
   final bool loading;
   final EdgeInsets padding;
   final void Function() onPressed;
@@ -33,19 +33,19 @@ class CustomTextButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(radius),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: enable ? onPressed : () {},
-        focusColor: enable
+        onTap: enabled ? onPressed : () {},
+        focusColor: enabled
             ? invert
                   ? theme.custom.invertHover
                   : theme.custom.hover
             : theme.custom.transparent,
-        splashColor: enable
+        splashColor: enabled
             ? invert
                   ? theme.custom.invertSplash
                   : theme.custom.splash
             : theme.custom.transparent,
         highlightColor: theme.custom.transparent,
-        hoverColor: enable
+        hoverColor: enabled
             ? invert
                   ? theme.custom.invertHover
                   : theme.custom.hover
