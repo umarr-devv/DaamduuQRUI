@@ -13,45 +13,45 @@ class CustomThemeData {
     return brightness == Brightness.light ? light : dark;
   }
 
-  Color get primary => Color(0xffe44641);
-
-  Color get primaryBg => const Color(0xFFffffff);
-
-  Color get secondaryBg => const Color(0xFFF5F5F6);
-
-  Color get invertBg => const Color(0xff1e293c);
-
-  Color get primaryFg => const Color(0xff2a2a2a);
-
-  Color get secondaryFg => Color(0xff767676);
-
-  Color get invertFg => Color(0xffffffff);
+  Color get accent => Color(0xffe44641);
 
   Color get black => Color(0xff000000);
 
   Color get white => Color(0xffffffff);
 
+  Color get zink => Color(0xff18181b);
+
+  Color get slate => Color(0xff64748b);
+
+  Color get red => Color(0xffdc2626);
+
+  Color get rose => Color(0xffe11d48);
+
+  Color get orange => Color(0xFFf97316);
+
   Color get green => Color(0xff16a34a);
 
   Color get blue => Color(0xff2563eb);
 
-  Color get red => Color(0xffdc2626);
-
-  Color get orange => Color(0xFFf97316);
-
   Color get yellow => Color(0xffffc107);
 
-  Color get hover => primaryFg.withValues(alpha: 0.075);
-
-  Color get invertHover => invertFg.withValues(alpha: 0.075);
-
-  Color get splash => primaryFg.withValues(alpha: 0.125);
-
-  Color get invertSplash => invertFg.withValues(alpha: 0.125);
-
-  Color get textSelect => primaryFg.withValues(alpha: 0.075);
+  Color get violet => Color(0xff7c3aed);
 
   Color get transparent => Color(0x00000000);
+
+  Color get primary => zink;
+
+  Color get primaryBg => white;
+
+  Color get secondaryBg => const Color(0xFFF5F5F6);
+
+  Color get primaryFg => zink;
+
+  Color get secondaryFg => slate;
+
+  Color get invertFg => white;
+
+  Color get textSelect => primaryFg.withValues(alpha: 0.075);
 
   TextStyle get primaryTextStyle =>
       TextStyle(fontWeight: FontWeight.w500, color: primaryFg, fontSize: 14);
@@ -84,7 +84,7 @@ class CustomThemeData {
         primaryForeground: invertFg,
         secondary: secondaryBg,
         secondaryForeground: secondaryFg,
-        muted: invertBg,
+        muted: slate,
         mutedForeground: invertFg,
         destructive: red,
         destructiveForeground: invertFg,
