@@ -31,11 +31,13 @@ class CustomThemeData {
 
   Color get white => Color(0xffffffff);
 
-  Color get green => Color(0xff48a357);
+  Color get green => Color(0xff16a34a);
 
-  Color get blue => Color(0xff0d6efd);
+  Color get blue => Color(0xff2563eb);
 
-  Color get orange => Color(0xFFfd7e14);
+  Color get rose => Color(0xffdc2626);
+
+  Color get orange => Color(0xFFf97316);
 
   Color get yellow => Color(0xffffc107);
 
@@ -79,7 +81,7 @@ class CustomThemeData {
         background: primaryFg,
         foreground: primaryFg,
         primary: primary,
-        primaryForeground: primaryFg,
+        primaryForeground: invertFg,
         secondary: secondaryBg,
         secondaryForeground: secondaryFg,
         muted: invertBg,
