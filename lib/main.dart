@@ -1,4 +1,4 @@
-import 'package:daamduu_qr_ui/theme/theme.dart';
+import 'package:daamduuqr_ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {

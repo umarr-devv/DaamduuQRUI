@@ -1,5 +1,5 @@
-import 'package:daamduu_qr_ui/icons/icons.dart';
-import 'package:daamduu_qr_ui/theme/theme.dart';
+import 'package:daamduuqr_ui/icons/icons.dart';
+import 'package:daamduuqr_ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {

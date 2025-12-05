@@ -64,7 +64,7 @@ enum CustomIcons {
   SvgPicture call({double size = 24, Color? color}) {
     return SvgPicture.asset(
       '$iconsPath/$assetName',
-      package: 'daamduu_qr_ui',
+      package: 'daamduuqr_ui',
       height: size,
       colorFilter: color != null
           ? ColorFilter.mode(color, BlendMode.srcIn)

@@ -23,7 +23,7 @@ class CustomThemeData {
 
   Color get slate => Color(0xff64748b);
 
-  Color get red => Color(0xffdc2626);
+  Color get red => Color(0xffEF4444);
 
   Color get rose => Color(0xffe11d48);
 
@@ -76,21 +76,21 @@ class CustomThemeData {
       typography: FTypography(defaultFontFamily: font),
       colors: FColors(
         brightness: brightness,
-        systemOverlayStyle: SystemUiOverlayStyle.light,
-        barrier: secondaryFg,
-        background: primaryFg,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        barrier: primaryFg,
+        background: primaryBg,
         foreground: primaryFg,
         primary: primary,
         primaryForeground: invertFg,
         secondary: secondaryBg,
         secondaryForeground: secondaryFg,
-        muted: slate,
-        mutedForeground: invertFg,
+        muted: secondaryBg,
+        mutedForeground: secondaryFg,
         destructive: red,
         destructiveForeground: invertFg,
-        error: orange,
+        error: red,
         errorForeground: invertFg,
-        border: secondaryFg,
+        border: secondaryBg,
       ),
     );
   }
