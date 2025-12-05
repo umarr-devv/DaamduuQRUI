@@ -15,57 +15,65 @@ class CustomThemeData {
 
   Color get accent => Color(0xffe44641);
 
-  Color get black => Color(0xff000000);
-
-  Color get white => Color(0xffffffff);
-
-  Color get zink => Color(0xff18181b);
-
-  Color get slate => Color(0xff64748b);
-
-  Color get red => Color(0xffEF4444);
-
-  Color get rose => Color(0xffe11d48);
-
-  Color get orange => Color(0xFFf97316);
-
-  Color get green => Color(0xff16a34a);
-
-  Color get blue => Color(0xff2563eb);
-
-  Color get yellow => Color(0xffffc107);
-
-  Color get violet => Color(0xff7c3aed);
-
   Color get transparent => Color(0x00000000);
 
-  Color get primary => zink;
+  Color get barrier => by(light: Color(0x33000000), dark: Color(0x7A000000));
 
-  Color get primaryBg => white;
+  Color get background => by(light: Color(0xFFFFFFFF), dark: Color(0xFF09090B));
 
-  Color get secondaryBg => const Color(0xFFF5F5F6);
+  Color get foreground => by(light: Color(0xFF09090B), dark: Color(0xFFFAFAFA));
 
-  Color get primaryFg => zink;
+  Color get primary => by(light: Color(0xFF18181B), dark: Color(0xFFFAFAFA));
 
-  Color get secondaryFg => slate;
+  Color get primaryForeground =>
+      by(light: Color(0xFFFAFAFA), dark: Color(0xFF18181B));
 
-  Color get invertFg => white;
+  Color get secondary => by(light: Color(0xFFF4F4F5), dark: Color(0xFF27272A));
 
-  Color get textSelect => primaryFg.withValues(alpha: 0.075);
+  Color get secondaryForeground =>
+      by(light: Color(0xC018181B), dark: Color(0xC0FAFAFA));
+
+  Color get muted => by(light: Color(0xFFF4F4F5), dark: Color(0xFF27272A));
+
+  Color get mutedForeground =>
+      by(light: Color(0xFF71717A), dark: Color(0xFFA1A1AA));
+
+  Color get destructive =>
+      by(light: Color(0xFFEF4444), dark: Color(0xFF7F1D1D));
+
+  Color get destructiveForeground =>
+      by(light: Color(0xFFFAFAFA), dark: Color(0xFFFAFAFA));
+
+  Color get error => by(light: Color(0xFFEF4444), dark: Color(0xFF7F1D1D));
+
+  Color get errorForeground =>
+      by(light: Color(0xFFFAFAFA), dark: Color(0xFFFAFAFA));
+
+  Color get border => by(light: Color(0xFFE4E4E7), dark: Color(0xFF27272A));
+
+  Color get textSelect => foreground.withValues(alpha: 0.075);
 
   TextStyle get primaryTextStyle =>
-      TextStyle(fontWeight: FontWeight.w500, color: primaryFg, fontSize: 14);
-  TextStyle get secondaryTextStyle =>
-      TextStyle(fontWeight: FontWeight.w400, color: secondaryFg, fontSize: 14);
-  TextStyle get invertTextStyle =>
-      TextStyle(fontWeight: FontWeight.w500, color: invertFg, fontSize: 14);
+      TextStyle(fontWeight: FontWeight.w500, color: foreground, fontSize: 14);
+
+  TextStyle get secondaryTextStyle => TextStyle(
+    fontWeight: FontWeight.w400,
+    color: secondaryForeground,
+    fontSize: 14,
+  );
+
+  TextStyle get invertTextStyle => TextStyle(
+    fontWeight: FontWeight.w500,
+    color: primaryForeground,
+    fontSize: 14,
+  );
 
   ThemeData toTheme() {
     return ThemeData(
       useMaterial3: true,
       brightness: brightness,
       primaryColor: primary,
-      scaffoldBackgroundColor: primaryBg,
+      scaffoldBackgroundColor: background,
       fontFamily: font,
       textSelectionTheme: TextSelectionThemeData(selectionColor: textSelect),
     );
@@ -77,20 +85,20 @@ class CustomThemeData {
       colors: FColors(
         brightness: brightness,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        barrier: primaryFg,
-        background: primaryBg,
-        foreground: primaryFg,
+        barrier: barrier,
+        background: background,
+        foreground: foreground,
         primary: primary,
-        primaryForeground: invertFg,
-        secondary: secondaryBg,
-        secondaryForeground: secondaryFg,
-        muted: secondaryBg,
-        mutedForeground: secondaryFg,
-        destructive: red,
-        destructiveForeground: invertFg,
-        error: red,
-        errorForeground: invertFg,
-        border: secondaryBg,
+        primaryForeground: primaryForeground,
+        secondary: secondary,
+        secondaryForeground: secondaryForeground,
+        muted: muted,
+        mutedForeground: mutedForeground,
+        destructive: destructive,
+        destructiveForeground: destructiveForeground,
+        error: error,
+        errorForeground: errorForeground,
+        border: border,
       ),
     );
   }

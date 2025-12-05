@@ -31,8 +31,8 @@ class CustomAnimatedIndicator extends StatelessWidget {
           expansionFactor: 2.5,
           dotHeight: dotSize,
           dotWidth: dotSize,
-          dotColor: dotColor ?? theme.custom.secondaryFg.withValues(alpha: 0.5),
-          activeDotColor: activeDotColor ?? theme.custom.primaryFg,
+          dotColor: dotColor ?? theme.custom.foreground.withValues(alpha: 0.5),
+          activeDotColor: activeDotColor ?? theme.custom.foreground,
         ),
       ),
     );
