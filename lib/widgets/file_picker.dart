@@ -8,11 +8,13 @@ class CustomFilePicker extends StatelessWidget {
     super.key,
     required this.onPick,
     this.size = 140,
+    this.loading = false,
     this.fileType = FileType.image,
   });
 
   final FileType fileType;
   final double size;
+  final bool loading;
   final void Function(FilePickerResult) onPick;
 
   Future pick() async {
@@ -35,7 +37,9 @@ class CustomFilePicker extends StatelessWidget {
         width: size,
         decoration: BoxDecoration(color: theme.custom.transparent),
         child: FCard.raw(
-          child: Icon(Icons.add, color: theme.custom.mutedForeground, size: 32),
+          child: loading
+              ? FCircularProgress()
+              : Icon(Icons.add, color: theme.custom.mutedForeground, size: 32),
         ),
       ),
     );
